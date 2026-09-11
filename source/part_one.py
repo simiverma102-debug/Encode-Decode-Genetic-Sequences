@@ -73,6 +73,8 @@ def encode_strand(strand):
             new_entry = strand[index - 1] + str(count)
             encoding.append(new_entry)
             count = 1
+    new_entry = strand[-1]+str(count)
+    encoding.append(new_entry)        
 
     return "".join(encoding)
 
