@@ -70,10 +70,10 @@ def encode_strand(strand):
         if strand[index - 1] == strand[index]:
             count += 1
         else:
-            new_entry = strand[index - 1] + str(count)
+            new_entry = strand[index - 1] + str(count)   #type error, fixed by converting number into string
             encoding.append(new_entry)
             count = 1
-    new_entry = strand[-1]+str(count)
+    new_entry = strand[-1]+str(count)        #
     encoding.append(new_entry)        
 
     return "".join(encoding)
